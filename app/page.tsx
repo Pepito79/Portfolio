@@ -1,6 +1,9 @@
 "use client"
 
 import { useEffect, useState } from "react"
+// IMPORT DIRECT DU JSON
+import resumeData from "../public/resumeData.json"
+
 import Hero from "@/components/hero"
 import About from "@/components/about"
 import Experience from "@/components/experience"
@@ -10,17 +13,10 @@ import Education from "@/components/education"
 import Contact from "@/components/contact"
 import Footer from "@/components/footer"
 
-interface ResumeData {
-  main: any
-  resume: any
-  portfolio: any
-}
-
 export default function Page() {
-  const [data, setData] = useState<ResumeData | null>(null)
   const [isDark, setIsDark] = useState(true)
 
-  // Gestion du thème
+  // Gestion du thème (on garde le useEffect car localStorage est lié au navigateur)
   useEffect(() => {
     const theme = localStorage.getItem("theme")
     if (theme === "light") {
@@ -44,27 +40,7 @@ export default function Page() {
     }
   }
 
-  useEffect(() => {
-    fetch("/resumeData.json")
-      .then((res) => res.json())
-      .then((json) => setData(json))
-      .catch((err) => console.error("[v0] Failed to load resume data:", err))
-  }, [])
-
-  if (!data) {
-    return (
-      <div className="flex min-h-screen items-center justify-center bg-background">
-        <div className="font-mono text-sm text-accent animate-pulse">
-          <pre className="text-center">
-            {`╔════════════════╗
-║   LOADING...   ║
-╚════════════════╝`}
-          </pre>
-        </div>
-      </div>
-    )
-  }
-
+  // NOTE: On utilise directement 'resumeData' au lieu de 'data'
   return (
     <main className="min-h-screen bg-background relative">
       {/* NAVBAR FIXE STYLE TERMINAL */}
@@ -90,13 +66,13 @@ export default function Page() {
 
       {/* AJOUT D'UN PADDING TOP POUR LA NAVBAR */}
       <div className="pt-12">
-        <Hero data={data.main} />
-        <About data={data.main} />
-        <Experience data={data.resume} />
-        <Projects data={data.portfolio} />
-        {/* <Skills data={data.resume} /> */}
-        <Education data={data.resume} />
-        <Contact data={data.main} />
+        <Hero data={resumeData.main} />
+        <About data={resumeData.main} />
+        <Experience data={resumeData.resume} />
+        <Projects data={resumeData.portfolio} />
+        {/* <Skills data={resumeData.resume} /> */}
+        <Education data={resumeData.resume} />
+        <Contact data={resumeData.main} />
         <Footer />
       </div>
     </main>

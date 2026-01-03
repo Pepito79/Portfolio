@@ -10,10 +10,7 @@ const jetbrainsMono = JetBrains_Mono({
 
 export const metadata: Metadata = {
   title: "Guessous Saad - Portfolio",
-  icons: {
-    icon: "/logo.png", // Next.js s'occupe de tout si tu as un fichier simple
-    apple: "/logo.png",
-  },
+
 }
 
 export default function RootLayout({

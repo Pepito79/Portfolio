@@ -3,8 +3,8 @@ interface ProjectsProps {
     projects: Array<{
       title: string
       about: string
-      github: string
-      post: string | null
+      github?: string
+      post?: string | null
       image?: string
     }>
   }
