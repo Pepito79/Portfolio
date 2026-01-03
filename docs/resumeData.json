@@ -1,0 +1,140 @@
+{
+  "main": {
+    "name": "Guessous Saad",
+    "occupation": "Full-Stack Developer & AI Enthusiast",
+    "description": "",
+    "image": "profilepic.jpg",
+    "bio": "I’m Saad, a random guy enjoying building cool stuff and learning fast. Currently a Computer Science student at ENSEEIHT, I’m passionate about AI/DL, robotics, and tech in general. Above all, I'm obsessed with the startup world: turning ideas into products, exploring problems worth solving, and figuring out how to create real value",
+    "contactmessage": "Let's build something amazing together!",
+    "email": "saadguessous2022@gmail.com",
+    "address": {
+      "street": "77 Massachusetts Ave",
+      "city": "Toulosue",
+      "state": "France",
+      "zip": "02139"
+    },
+    "website": "",
+    "resumedownload": "",
+    "social": [
+      {
+        "name": "linkedin",
+        "url": "https://www.linkedin.com/in/saadguessous1/",
+        "className": "fa fa-linkedin"
+      },
+      {
+        "name": "github",
+        "url": "https://github.com/Pepito79",
+        "className": "fa fa-github"
+      },
+      {
+        "name": "blog",
+        "url": "https://pepito79.github.io/FromCodeToVenture/",
+        "className": "fa fa-linkedin"
+      }
+    ]
+  },
+  "resume": {
+    "skillmessage": "My Technical Arsenal",
+    "education": [
+      {
+        "school": "Lycée Champollion",
+        "degree": "Prepatory classes MPSI / MP*",
+        "graduated": "2022 - 2024",
+        "description": "Intensive undergraduate program in Mathematics and Physics, preparing for national competitive exams"
+      },
+      {
+        "school": "ENSEEIHT",
+        "degree": "MSc in Computer Science & Software Engineering",
+        "graduated": "2024 - 2027",
+        "description": "Specializing in AI and Software Systems. Top-tier French Engineering School "
+      }
+    ],
+    "work": [
+      {
+        "company": "Neiji ",
+        "title": "Full-Stack & AI Developer",
+        "years": "Jul 25 - Sep 25"
+      }
+    ],
+    "skills": [
+      {
+        "name": "TypeScript",
+        "level": "95%"
+      },
+      {
+        "name": "Next.js & React",
+        "level": "90%"
+      },
+      {
+        "name": "Python & FastAPI",
+        "level": "85%"
+      },
+      {
+        "name": "Rust",
+        "level": "80%"
+      },
+      {
+        "name": "PostgreSQL & Redis",
+        "level": "88%"
+      },
+      {
+        "name": "Docker & Kubernetes",
+        "level": "82%"
+      }
+    ]
+  },
+  "portfolio": {
+    "projects": [
+      {
+        "title": "QuickRAG",
+        "about": "An open-source toolkit for Retrieval-Augmented Generation (RAG) with advanced techniques like : Colbert and  Rerankers .It combines document indexing, retrieval, optional reranking, and querying large language models (LLMs) like Gemini.",
+        "github": "https://github.com/Pepito79/QuickRag",
+        "post": "https://pepito79.github.io/FromCodeToVenture/AI-DL/ColBERT-and-the-late-interaction-paradigm-implemented-with-Ragatouille"
+      },
+      {
+        "title": " ViT from scratch",
+        "about": " A minimalist, from-scratch implementation of the Vision Transformer (ViT) using PyTorch. Its purpose is to provide a clean, modular view of the ViT's core components for educational and deep understanding.",
+        "image": "/devdump.png",
+        "github": "https://github.com/Pepito79/ViT-from-scratch",
+        "post": ""
+      },
+      {
+        "title": "Transformer from scratch",
+        "about": "Implemenation of a Transformer model from scratch using PyTorch, following the architecture introduced in the paper : Attention is all you need ",
+        "github": "https://github.com/Pepito79/Transformer",
+        "post": ""
+      },
+      {
+        "title": "LoRA fine-tuning in a medical dataset",
+        "about": "Fine-tuned a BERT model on a medical dataset using LoRA and quantization. The model predicts illnesses based on patient symptoms and provides explanations for its reasoning ",
+        "image": "/furnace.png",
+        "github": "https://github.com/Pepito79/LoRa-fine-tuning-",
+        "post": "https://pepito79.github.io/FromCodeToVenture/AI-DL/LoRa-Fine-tuning-method"
+      },
+      {
+        "title": "Launched an AI-driven automation startup",
+        "about": "Founded an automation startup leveraging AI to streamline workflows",
+        "image": "/leegit.png",
+        "post": ""
+      },
+      {
+        "title": "Stealth startup ",
+        "about": "Actually building something exciting ....",
+        "image": "/byte.png",
+        "post": null
+      }
+    ]
+  },
+  "testimonials": {
+    "testimonials": [
+      {
+        "text": "Alex's technical expertise and problem-solving abilities are outstanding. They transformed our entire infrastructure and reduced costs by 40%.",
+        "user": "Sarah Chen, CTO at TechVentures"
+      },
+      {
+        "text": "Working with Alex was a game-changer for our team. Their code quality and architectural decisions set new standards for our organization.",
+        "user": "Marcus Johnson, Engineering Manager"
+      }
+    ]
+  }
+}
