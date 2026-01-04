@@ -9,6 +9,7 @@ interface HeroProps {
 }
 
 export default function Hero({ data }: HeroProps) {
+  // ... Ton texte ASCII fullText reste inchangé ...
   const fullText = `
  ██████╗ ██╗   ██╗███████╗███████╗███████╗ ██████╗ ██╗   ██╗███████╗    ███████╗ █████╗  █████╗ ██████╗ 
 ██╔════╝ ██║   ██║██╔════╝██╔════╝██╔════╝██╔═══██╗██║   ██║██╔════╝    ██╔════╝██╔══██╗██╔══██╗██╔══██╗
@@ -22,32 +23,24 @@ export default function Hero({ data }: HeroProps) {
 
   useEffect(() => {
     let i = 0
-    // On augmente le pas (step) pour que l'ASCII se dessine plus vite
-    // tout en gardant l'aspect "chargement"
     const step = 4
-
     const timer = setInterval(() => {
       setDisplayText(fullText.slice(0, i))
       i += step
-
       if (i > fullText.length) {
-        setDisplayText(fullText) // Sécurité pour afficher le texte complet à la fin
+        setDisplayText(fullText)
         clearInterval(timer)
         setIsFinished(true)
       }
-    }, 10) // Un intervalle de 10ms avec un saut de 4 caractères est plus stable pour le CPU
-
+    }, 10)
     return () => clearInterval(timer)
   }, [fullText])
 
   return (
     <section className="container mx-auto px-4 py-20 md:py-32 relative overflow-hidden min-h-screen flex flex-col items-center justify-center">
-      {/* Grille de fond */}
       <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:40px_40px] pointer-events-none"></div>
 
       <div className="flex flex-col items-center justify-center relative z-10 w-full">
-
-        {/* Logo ASCII GRAND FORMAT */}
         <div className="font-mono leading-none mb-12 w-full flex justify-center overflow-x-auto no-scrollbar">
           <pre className="text-[7px] sm:text-[10px] md:text-[12px] lg:text-[14px] text-accent leading-tight font-bold whitespace-pre">
             {displayText}
@@ -55,7 +48,6 @@ export default function Hero({ data }: HeroProps) {
           </pre>
         </div>
 
-        {/* Détails du profil (S'affiche après l'ASCII) */}
         <div className={`w-full max-w-2xl transition-all duration-1000 ${isFinished ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
           <div className="font-mono bg-card/40 backdrop-blur-md border border-border p-6 md:p-8 rounded-sm shadow-[0_0_30px_rgba(0,0,0,0.5)]">
 
@@ -82,9 +74,29 @@ export default function Hero({ data }: HeroProps) {
                   {data.occupation}
                 </div>
               </div>
+
+              {/* SECTION CV AJOUTÉE ICI */}
+              <div className="flex flex-col md:flex-row md:items-center gap-4 pt-4">
+                <span className="text-accent text-xs font-bold w-32 tracking-[0.2em] opacity-70 border-r border-accent/20">DOCUMENTS</span>
+                <div className="flex gap-4">
+                  <a
+                    href="/Portfolio/cv/cv-fr.pdf"
+                    target="_blank"
+                    className="text-xs border border-border px-3 py-1 hover:border-accent hover:text-accent transition-all bg-background/50 flex items-center gap-2"
+                  >
+                    <span className="text-accent text-[10px]">↓</span> [CV_FRENCH.PDF]
+                  </a>
+                  <a
+                    href="/Portfolio/cv/cv-en.pdf"
+                    target="_blank"
+                    className="text-xs border border-border px-3 py-1 hover:border-accent hover:text-accent transition-all bg-background/50 flex items-center gap-2"
+                  >
+                    <span className="text-accent text-[10px]">↓</span> [CV_ENGLISH.PDF]
+                  </a>
+                </div>
+              </div>
             </div>
 
-            {/* Décoration style footer de carte */}
             <div className="mt-8 flex justify-end">
               <div className="text-[9px] text-muted-foreground/30 font-bold tracking-widest uppercase">
                 Enseeiht_Student_Id: 7822-SD
