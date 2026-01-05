@@ -93,6 +93,13 @@ export default function Hero({ data }: HeroProps) {
                   >
                     <span className="text-accent text-[10px]">↓</span> [CV_ENGLISH.PDF]
                   </a>
+                  <a
+                    href="/Portfolio/ppp/ppp.pdf"
+                    target="_blank"
+                    className="text-xs border border-border px-3 py-1 hover:border-accent hover:text-accent transition-all bg-background/50 flex items-center gap-2"
+                  >
+                    <span className="text-accent text-[10px]">↓</span> [PPP.PDF]
+                  </a>
                 </div>
               </div>
             </div>
