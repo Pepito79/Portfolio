@@ -1,6 +1,6 @@
 const nextConfig = {
   output: 'export',
-  basePath: '/Portfolio', // Le nom exact de ton repo GitHub
+  basePath: '/Portfolio', 
   images: { unoptimized: true }
 };
 

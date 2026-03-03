@@ -79,26 +79,19 @@ export default function Hero({ data }: HeroProps) {
               <div className="flex flex-col md:flex-row md:items-center gap-4 pt-4">
                 <span className="text-accent text-xs font-bold w-32 tracking-[0.2em] opacity-70 border-r border-accent/20">DOCUMENTS</span>
                 <div className="flex gap-4">
-                  <a
+                  {/* <a
                     href="/Portfolio/cv/cv-fr.pdf"
                     target="_blank"
                     className="text-xs border border-border px-3 py-1 hover:border-accent hover:text-accent transition-all bg-background/50 flex items-center gap-2"
                   >
                     <span className="text-accent text-[10px]">↓</span> [CV_FRENCH.PDF]
-                  </a>
+                  </a> */}
                   <a
-                    href="/Portfolio/cv/cv-en.pdf"
+                    href="/Portfolio/cv/cv-en2.pdf"
                     target="_blank"
                     className="text-xs border border-border px-3 py-1 hover:border-accent hover:text-accent transition-all bg-background/50 flex items-center gap-2"
                   >
-                    <span className="text-accent text-[10px]">↓</span> [CV_ENGLISH.PDF]
-                  </a>
-                  <a
-                    href="/Portfolio/ppp/ppp.pdf"
-                    target="_blank"
-                    className="text-xs border border-border px-3 py-1 hover:border-accent hover:text-accent transition-all bg-background/50 flex items-center gap-2"
-                  >
-                    <span className="text-accent text-[10px]">↓</span> [PPP.PDF]
+                    <span className="text-accent text-[10px]">↓</span> [RESUME.PDF]
                   </a>
                 </div>
               </div>
